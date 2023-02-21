@@ -210,6 +210,8 @@ UV390Codeplug::ChannelElement::fromChannelObj(const Channel *chan, Context &ctx)
       setSquelch(ctx.config()->settings()->squelch());
     else
       setSquelch(achan->squelch());
+  } else {
+    setUInt8(15, 1);
   }
 
   // apply extensions
